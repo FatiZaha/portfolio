@@ -1,3 +1,4 @@
+import profile from '../assets/profile.png';
 interface HomeProps {
   onContactClick: () => void;
 }
@@ -19,7 +20,7 @@ export function Home({ onContactClick }: HomeProps) {
                 <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
                 
                   <img
-                    src="./assets/profile.png"
+                    src={profile}
                     alt="Portrait of Fatima Zahra Zaha"
                     className="w-full h-full object-cover rounded-full"
                   />
