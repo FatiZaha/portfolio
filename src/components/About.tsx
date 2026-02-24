@@ -16,7 +16,7 @@ export function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent mix-blend-multiply pointer-events-none" />
 
               <img
-                src="src/assets/profile2.png"
+                src="assets/profile2.png"
                 alt="Portrait of Fatima Zahra Zaha"
                 className="w-full h-full object-cover rounded-[2rem]"
               />
