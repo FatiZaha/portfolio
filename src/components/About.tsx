@@ -5,7 +5,7 @@ export function About() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-20 text-center">About me</h2>
 
-        <div className="max-w-5xl mx-auto flex flex-row md:flex-row items-center gap-8 md:gap-15">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-15">
           {/* Profile image */}
           <div className="relative flex-shrink-0">
             {/* Outer glow frame */}
