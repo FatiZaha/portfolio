@@ -1,5 +1,16 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Award } from 'lucide-react';
+import CloudComputing from '../assets/Cloud-Computing.png';
+import AgileScrum from '../assets/Agile_scrum.png';
+import DevOps from '../assets/DevOps.png';
+import Containers from '../assets/Containers-with-Docker-Kubernetes-OpenShift.png';
+import GitHub from '../assets/Git-and-GitHub.png';
+import JavaOOP from '../assets/Intro_JAVA_OOP.png';
+import MachineLearning from '../assets/Machine-Learning-with-Python.png';
+import SpringBoot from '../assets/Java-Microservices-with-Spring-Boot_Cloud.png';
+import ReactNative from '../assets/React-Native.png';
+import ReactBasics from '../assets/React-Basics.png';
+import PythonForEverybody from '../assets/Python-for-Everybody.png';
 
 interface Certificate {
   id: number;
@@ -27,7 +38,7 @@ const certificates: Certificate[] = [
     title: 'Introduction to Cloud Computing',
     issuer: 'IBM (via Coursera)',
     date: 'March 15, 2024',
-    image: 'assets/Cloud-Computing.png',
+    image: CloudComputing,
     description: 'Course certificate (non-credit) focused on cloud concepts, service models, deployment models, and core cloud benefits.',
     credentialUrl: 'https://coursera.org/verify/8PQPQCSWH7MW'
   },
@@ -36,7 +47,7 @@ const certificates: Certificate[] = [
     title: 'Introduction to DevOps',
     issuer: 'IBM (via Coursera)',
     date: 'April 22, 2024',
-    image: 'assets/DevOps.png',
+    image: DevOps,
     description: 'Course certificate (non-credit) introducing DevOps culture, CI/CD pipelines, automation, and collaboration practices.',
     credentialUrl: 'https://coursera.org/verify/DJ65XW3LFVJ2'
   },
@@ -45,7 +56,7 @@ const certificates: Certificate[] = [
     title: 'Introduction to Containers w/ Docker, Kubernetes & OpenShift',
     issuer: 'IBM (via Coursera)',
     date: 'March 26, 2024',
-    image: 'assets/Containers-with-Docker-Kubernetes-OpenShift.png',
+    image: Containers,
     description: 'Course certificate (non-credit) covering containerization fundamentals, Docker tooling, Kubernetes orchestration, and OpenShift basics.',
     credentialUrl: 'https://coursera.org/verify/JB7D43D7HZJD'
   },
@@ -54,7 +65,7 @@ const certificates: Certificate[] = [
     title: 'Introduction to Git and GitHub',
     issuer: 'Google (via Coursera)',
     date: 'May 10, 2024',
-    image: 'assets/Git-and-GitHub.png',
+    image: GitHub,
     description: 'Course certificate (non-credit) focused on Git fundamentals, branching, collaboration, and GitHub workflows.',
     credentialUrl: 'https://coursera.org/verify/A4363T5FNRP9'
   },
@@ -63,7 +74,7 @@ const certificates: Certificate[] = [
     title: 'Introduction to Java and Object-Oriented Programming',
     issuer: 'University of Pennsylvania (via Coursera)',
     date: 'December 18, 2023',
-    image: 'assets/Intro_JAVA_OOP.png',
+    image: JavaOOP,
     description: 'Course certificate (non-credit) covering Java fundamentals, classes, objects, inheritance, and OOP design principles.',
     credentialUrl: 'https://coursera.org/verify/FARNSV64NXU9'
   },
@@ -72,7 +83,7 @@ const certificates: Certificate[] = [
     title: 'Machine Learning with Python',
     issuer: 'IBM (via Coursera)',
     date: 'December 19, 2024',
-    image: 'assets/Machine-Learning-with-Python.png',
+    image: MachineLearning,
     description: 'Specialization certificate with honors focused on supervised and unsupervised learning, model evaluation, and practical ML workflows in Python.',
     credentialUrl: 'https://coursera.org/verify/BEQPTCNZXVJW'
   },
@@ -81,7 +92,7 @@ const certificates: Certificate[] = [
     title: 'Building Scalable Java Microservices with Spring Boot and Spring Cloud',
     issuer: 'Google Cloud (via Coursera)',
     date: 'December 17, 2024',
-    image: 'assets/Java-Microservices-with-Spring-Boot_Cloud.png',
+    image: SpringBoot,
     description: 'Course certificate (non-credit) covering microservice design, Spring Boot services, and cloud-native patterns with Spring Cloud.',
     credentialUrl: 'https://coursera.org/verify/XC6U2Q87F1UN'
   },
@@ -90,7 +101,7 @@ const certificates: Certificate[] = [
     title: 'React Native',
     issuer: 'Meta (via Coursera)',
     date: 'April 21, 2024',
-    image: 'assets/React-Native.png',
+    image: ReactNative,
     description: 'Course certificate (non-credit) focused on building cross-platform mobile apps with React Native components and navigation.',
     credentialUrl: 'https://coursera.org/verify/NUBR59NRPTHH'
   },
@@ -99,7 +110,7 @@ const certificates: Certificate[] = [
     title: 'React Basics',
     issuer: 'Meta (via Coursera)',
     date: 'December 24, 2023',
-    image: 'assets/React-Basics.png',
+    image: ReactBasics,
     description: 'Course certificate (non-credit) covering core React concepts including components, JSX, props, state, and hooks fundamentals.',
     credentialUrl: 'https://coursera.org/verify/Q7ZWDZYLQEK5'
   },
@@ -108,7 +119,7 @@ const certificates: Certificate[] = [
     title: 'Python for Everybody Specialization',
     issuer: 'University of Michigan (via Coursera)',
     date: 'April 25, 2023',
-    image: 'assets/Python-for-Everybody.png',
+    image: PythonForEverybody,
     description: 'Specialization certificate (5 courses) covering Python programming, data structures, web data access, databases, and a capstone project for data retrieval and visualization.',
     credentialUrl: 'https://coursera.org/verify/specialization/R9APQA75HN96'
   }
