@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Award } from 'lucide-react';
-import CloudComputing from '../assets/Cloud-Computing.png';
-import AgileScrum from '../assets/Agile_scrum.png';
-import DevOps from '../assets/DevOps.png';
-import Containers from '../assets/Containers-with-Docker-Kubernetes-OpenShift.png';
-import GitHub from '../assets/Git-and-GitHub.png';
-import JavaOOP from '../assets/Intro_JAVA_OOP.png';
-import MachineLearning from '../assets/Machine-Learning-with-Python.png';
-import SpringBoot from '../assets/Java-Microservices-with-Spring-Boot_Cloud.png';
-import ReactNative from '../assets/React-Native.png';
-import ReactBasics from '../assets/React-Basics.png';
-import PythonForEverybody from '../assets/Python-for-Everybody.png';
+import CloudComputing from '../assets/Cloud-Computing.png'
+import AgileScrum from '../assets/Agile_scrum.png'
+import DevOps from '../assets/DevOps.png'
+import Containers from '../assets/Containers-with-Docker-Kubernetes-OpenShift.png'
+import GitHub from '../assets/Git-and-GitHub.png'
+import JavaOOP from '../assets/Intro_JAVA_OOP.png'
+import MachineLearning from '../assets/Machine-Learning-with-Python.png'
+import SpringBoot from '../assets/Java-Microservices-with-Spring-Boot_Cloud.png'
+import ReactNative from '../assets/React-Native.png'
+import ReactBasics from '../assets/React-Basics.png'
+import PythonForEverybody from '../assets/Python-for-Everybody.png'
 
 interface Certificate {
   id: number;
@@ -29,7 +29,7 @@ const certificates: Certificate[] = [
     title: 'Introduction to Agile Development and Scrum',
     issuer: 'IBM (via Coursera)',
     date: 'March 18, 2024',
-    image: 'assets/Agile_scrum.png',
+    image: AgileScrum,
     description: 'Course certificate (non-credit) covering Agile principles, Scrum roles, ceremonies, and iterative delivery practices.',
     credentialUrl: 'https://coursera.org/verify/LCRHKMGH4NPB'
   },
