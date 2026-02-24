@@ -1,3 +1,4 @@
+import profile2 from '../assets/profile2.png'
 export function About() {
   return (
     <section id="about" className="py-16 bg-white dark:bg-gray-950">
@@ -16,7 +17,7 @@ export function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent mix-blend-multiply pointer-events-none" />
 
               <img
-                src="assets/profile2.png"
+                src={profile2}
                 alt="Portrait of Fatima Zahra Zaha"
                 className="w-full h-full object-cover rounded-[2rem]"
               />
