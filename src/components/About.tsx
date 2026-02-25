@@ -1,4 +1,4 @@
-import profile2 from '../assets/profile2.png'
+import profile2 from '../assets/profile2.jpg'
 export function About() {
   return (
     <section id="about" className="py-16 bg-white dark:bg-gray-950">
