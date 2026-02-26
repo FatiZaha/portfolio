@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+// 👇 1. Import the animation component
+import FadeInUp from './components/FadeInUp';
+
 import { Home } from './components/Home';
 import { About } from './components/About';
 import { Experience } from './components/Experience';
@@ -33,7 +36,8 @@ export function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'education', 'projects', 'certificates', 'skills', 'contact'];
+      // Note: Added 'languages' to this list so it tracks correctly
+      const sections = ['home', 'about', 'experience', 'education', 'projects', 'certificates', 'skills', 'languages', 'contact'];
       const currentSection = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -60,8 +64,8 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100">
-      {/* Header */}
+    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 overflow-x-hidden">
+      {/* Header - We do NOT animate the header so it stays sticky and stable */}
       <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur shadow-sm border-b border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -148,25 +152,57 @@ export function App() {
         )}
       </header>
 
-      {/* Sections */}
-      <Home onContactClick={() => scrollToSection('contact')} />
-      <About />
-      <Experience />
-      <Education />
-      <Projects />
-      <Certificates />
-      <TechnicalSkills />
+      {/* 🎬 MAIN SECTIONS WITH ANIMATIONS */}
+      {/* Each section is wrapped in FadeInUp */}
+      
+      <FadeInUp>
+        <Home onContactClick={() => scrollToSection('contact')} />
+      </FadeInUp>
 
-      {/* Languages & Interests */}
-      <section className="py-16 bg-white dark:bg-gray-950">
+      <FadeInUp>
+        <About />
+      </FadeInUp>
+
+      <FadeInUp>
+        <Experience />
+      </FadeInUp>
+
+      <FadeInUp>
+        <Education />
+      </FadeInUp>
+
+      <FadeInUp>
+        <Projects />
+      </FadeInUp>
+
+      <FadeInUp>
+        <Certificates />
+      </FadeInUp>
+
+      <FadeInUp>
+        <TechnicalSkills />
+      </FadeInUp>
+
+      {/* Languages & Interests 
+          I added a section ID so your scrollspy works for this area too 
+      */}
+      <section id="languages" className="py-16 bg-white dark:bg-gray-950">
         <div className="container mx-auto px-4 flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-center">
-          <Languages />
-          <Interests />
+          {/* 🎬 Animate Languages first */}
+          <FadeInUp className="w-full lg:w-1/2">
+            <Languages />
+          </FadeInUp>
+          
+          {/* 🎬 Animate Interests slightly after (staggered delay) */}
+          <FadeInUp delay={0.2} className="w-full lg:w-1/2">
+            <Interests />
+          </FadeInUp>
         </div>
       </section>
 
-      {/* Contact */}
-      <Contact />
+      <FadeInUp>
+        <Contact />
+      </FadeInUp>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 text-xs py-6">
