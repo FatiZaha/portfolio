@@ -41,15 +41,21 @@ export function TechnicalSkills() {
   const additionalSkills = [
     {
       title: 'Software Design',
-      description: 'UML, Merise, Design Patterns (MVC, Repository, Service Layer)',
+      items: ['UML', 'Merise', 'Design Patterns', 'MVC', 'Repository', 'Service Layer'],
+      // 🟢 Teal new color
+      pillColor: 'bg-teal-50 text-teal-800 dark:bg-teal-900/40 dark:text-teal-200 hover:bg-teal-100 dark:hover:bg-teal-800/60',
     },
     {
       title: 'Methodologies',
-      description: 'SCRUM, agile collaboration',
+      items: ['SCRUM', 'Agile Collaboration', 'Requirements Gathering'],
+      // 🟠 Amber new color
+      pillColor: 'bg-amber-50 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200 hover:bg-amber-100 dark:hover:bg-amber-800/60',
     },
     {
       title: 'Soft Skills',
-      description: 'Analytical skills, Teamwork, Problem-solving, Humility',
+      items: ['Analytical skills', 'Teamwork', 'Problem-solving', 'Communication', 'Humility'],
+      // 🌸 Rose new color
+      pillColor: 'bg-rose-50 text-rose-800 dark:bg-rose-900/40 dark:text-rose-200 hover:bg-rose-100 dark:hover:bg-rose-800/60',
     },
   ];
 
@@ -74,10 +80,16 @@ export function TechnicalSkills() {
 
         {/* Additional skills */}
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          {additionalSkills.map((skill, idx) => (
+          {additionalSkills.map((category, idx) => (
             <div key={idx} className={skillCardBase}>
-              <h3 className="text-base font-semibold mb-2">{skill.title}</h3>
-              <p className="text-sm text-gray-700 dark:text-gray-200">{skill.description}</p>
+              <h3 className="text-lg font-semibold mb-3">{category.title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {category.items.map((item) => (
+                  <span key={item} className={`${skillPillBase} ${category.pillColor}`}>
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
