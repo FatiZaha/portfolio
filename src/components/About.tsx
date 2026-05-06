@@ -30,15 +30,68 @@ export function About() {
           </div>
 
           {/* Professional summary */}
-          <div className=" flex-1 bg-gray-50 dark:bg-gray-900/80 border border-gray-100 dark:border-gray-800 p-6 md:p-8 rounded-2xl shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-            <p className="text-gray-700 dark:text-gray-200 leading-relaxed text-sm md:text-xl">
-              Recent Computer and Network Engineering graduate specializing in Full-Stack development,
-              Spring Boot microservices, and multiplatform applications. Hands-on experience gained through
-              academic projects and professional internships, with a solid foundation in API design,
-              Object-Oriented Programming (OOP), testing, and modern DevOps tools. Motivated, fast learner,
-              and actively seeking entry-level or junior opportunities to grow and contribute to real-world
-              software projects.
+          <div className="flex-1 bg-gray-50 dark:bg-gray-900/80 border border-gray-100 dark:border-gray-800 p-6 md:p-8 rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+            {/* Intro */}
+            <p className="text-gray-800 dark:text-gray-100 leading-relaxed text-sm md:text-lg font-medium">
+              I don’t just build applications—I design systems that are meant to scale. 
+              My journey into software development started during my Computer and Network Engineering studies, 
+              where I became driven by solving real-world problems through clean and efficient code.
             </p>
+
+            {/* Cards */}
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+              {/* Card 1 */}
+              <div className="group p-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <div className="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110">
+                  ⚡
+                </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">
+                  Full-Stack Development
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm mt-1">
+                  Building cross-platform applications from frontend to backend.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="group p-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <div className="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110">
+                  ⚙️
+                </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">
+                  Spring Boot Microservices
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm mt-1">
+                  Designing scalable APIs and distributed backend systems.
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="group p-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                <div className="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110">
+                  🧠
+                </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">
+                  Clean Code & DevOps
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm mt-1">
+                  Applying OOP, testing, and modern DevOps practices.
+                </p>
+              </div>
+
+            </div>
+
+            {/* Closing */}
+            <p className="mt-6 text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-lg">
+              Now working at a junior level, I focus on building reliable, production-ready systems 
+              while continuously learning and adapting. 
+              <span className="font-semibold text-gray-900 dark:text-white">
+                {" "}I’m looking to contribute to real-world software that scales and makes an impact.
+              </span>
+            </p>
+
           </div>
         </div>
       </div>
