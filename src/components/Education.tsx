@@ -27,7 +27,7 @@ export function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 bg-white dark:bg-gray-950">
+    <section id="education" className="portfolio-section py-20 bg-white dark:bg-gray-950">
       <div className="container mx-auto px-4">
 
         <h2 className="text-3xl font-bold mb-12 text-center">
@@ -76,7 +76,7 @@ export function Education() {
                         key={i}
                         className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300"
                       >
-                        <span className="text-indigo-500">▹</span>
+                        <span className="text-primary-500 dark:text-primary-300">▹</span>
                         <p>{item}</p>
                       </div>
                     ))}

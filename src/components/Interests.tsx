@@ -3,7 +3,7 @@ export function Interests() {
     {
       name: 'Drawing',
       icon: (
-        <svg className="w-8 h-8 text-indigo-600 dark:text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -12,12 +12,12 @@ export function Interests() {
           />
         </svg>
       ),
-      bgColor: 'bg-indigo-50 dark:bg-indigo-900/40',
+      bgColor: 'bg-primary-50 dark:bg-primary-900/40',
     },
     {
       name: 'Music',
       icon: (
-        <svg className="w-8 h-8 text-purple-600 dark:text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-secondary-600 dark:text-secondary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -26,7 +26,7 @@ export function Interests() {
           />
         </svg>
       ),
-      bgColor: 'bg-purple-50 dark:bg-purple-900/40',
+      bgColor: 'bg-secondary-50 dark:bg-secondary-900/40',
     },
   ];
 

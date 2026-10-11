@@ -1,3 +1,179 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Shared portfolio palette. Shade 500 preserves each supplied accent. */
+@theme {
+  --background-image-brand:
+    radial-gradient(ellipse at 18% 22%, var(--color-peach-500), transparent 65%),
+    radial-gradient(ellipse at 78% 65%, var(--color-coral-500), transparent 70%),
+    radial-gradient(ellipse at 30% 90%, var(--color-secondary-300), transparent 65%),
+    linear-gradient(135deg, var(--color-secondary-500), var(--color-secondary-300));
+  --color-white: #f7fff7;
+  --color-primary-50: color-mix(in srgb, #1a535c 5%, #f7fff7);
+  --color-primary-100: color-mix(in srgb, #1a535c 10%, #f7fff7);
+  --color-primary-200: color-mix(in srgb, #1a535c 22%, #f7fff7);
+  --color-primary-300: color-mix(in srgb, #1a535c 40%, #f7fff7);
+  --color-primary-400: color-mix(in srgb, #1a535c 60%, #f7fff7);
+  --color-primary-500: #1a535c;
+  --color-primary-600: color-mix(in srgb, #1a535c 90%, #0b2024);
+  --color-primary-700: color-mix(in srgb, #1a535c 75%, #0b2024);
+  --color-primary-800: color-mix(in srgb, #1a535c 55%, #0b2024);
+  --color-primary-900: color-mix(in srgb, #1a535c 35%, #0b2024);
+  --color-primary-950: color-mix(in srgb, #1a535c 15%, #0b2024);
+
+  --color-secondary-50: color-mix(in srgb, #4ecdc4 5%, #f7fff7);
+  --color-secondary-100: color-mix(in srgb, #4ecdc4 10%, #f7fff7);
+  --color-secondary-200: color-mix(in srgb, #4ecdc4 22%, #f7fff7);
+  --color-secondary-300: color-mix(in srgb, #4ecdc4 40%, #f7fff7);
+  --color-secondary-400: color-mix(in srgb, #4ecdc4 60%, #f7fff7);
+  --color-secondary-500: #4ecdc4;
+  --color-secondary-600: color-mix(in srgb, #4ecdc4 55%, #0b2024);
+  --color-secondary-700: color-mix(in srgb, #4ecdc4 45%, #0b2024);
+  --color-secondary-800: color-mix(in srgb, #4ecdc4 35%, #0b2024);
+  --color-secondary-900: color-mix(in srgb, #4ecdc4 22%, #0b2024);
+  --color-secondary-950: color-mix(in srgb, #4ecdc4 10%, #0b2024);
+
+  --color-coral-50: color-mix(in srgb, #ff6b6b 5%, #f7fff7);
+  --color-coral-100: color-mix(in srgb, #ff6b6b 10%, #f7fff7);
+  --color-coral-200: color-mix(in srgb, #ff6b6b 22%, #f7fff7);
+  --color-coral-300: color-mix(in srgb, #ff6b6b 40%, #f7fff7);
+  --color-coral-400: color-mix(in srgb, #ff6b6b 60%, #f7fff7);
+  --color-coral-500: #ff6b6b;
+  --color-coral-600: color-mix(in srgb, #ff6b6b 55%, #0b2024);
+  --color-coral-700: color-mix(in srgb, #ff6b6b 45%, #0b2024);
+  --color-coral-800: color-mix(in srgb, #ff6b6b 35%, #0b2024);
+  --color-coral-900: color-mix(in srgb, #ff6b6b 22%, #0b2024);
+  --color-coral-950: color-mix(in srgb, #ff6b6b 10%, #0b2024);
+
+  --color-peach-50: color-mix(in srgb, #ffe66d 5%, #f7fff7);
+  --color-peach-100: color-mix(in srgb, #ffe66d 10%, #f7fff7);
+  --color-peach-200: color-mix(in srgb, #ffe66d 22%, #f7fff7);
+  --color-peach-300: color-mix(in srgb, #ffe66d 40%, #f7fff7);
+  --color-peach-400: color-mix(in srgb, #ffe66d 60%, #f7fff7);
+  --color-peach-500: #ffe66d;
+  --color-peach-600: color-mix(in srgb, #ffe66d 55%, #0b2024);
+  --color-peach-700: color-mix(in srgb, #ffe66d 45%, #0b2024);
+  --color-peach-800: color-mix(in srgb, #ffe66d 35%, #0b2024);
+  --color-peach-900: color-mix(in srgb, #ffe66d 22%, #0b2024);
+  --color-peach-950: color-mix(in srgb, #ffe66d 10%, #0b2024);
+
+  --color-dusty-rose-50: var(--color-coral-50);
+  --color-dusty-rose-100: var(--color-coral-100);
+  --color-dusty-rose-200: var(--color-coral-200);
+  --color-dusty-rose-300: var(--color-coral-300);
+  --color-dusty-rose-400: var(--color-coral-400);
+  --color-dusty-rose-500: var(--color-coral-500);
+  --color-dusty-rose-600: var(--color-coral-600);
+  --color-dusty-rose-700: var(--color-coral-700);
+  --color-dusty-rose-800: var(--color-coral-800);
+  --color-dusty-rose-900: var(--color-coral-900);
+  --color-dusty-rose-950: var(--color-coral-950);
+  --color-gray-50: #f0faf6;
+  --color-gray-100: #e5f3ef;
+  --color-gray-200: #cde4df;
+  --color-gray-300: #adcac5;
+  --color-gray-400: #8faeaa;
+  --color-gray-500: #567673;
+  --color-gray-600: #405e5c;
+  --color-gray-700: #304b4b;
+  --color-gray-800: #213b3e;
+  --color-gray-900: #152e32;
+  --color-gray-950: #0b2024;
+}
+
+html { scrollbar-color: var(--color-secondary-600) var(--color-gray-100); }
+html.dark { scrollbar-color: var(--color-secondary-500) var(--color-gray-950); }
+::selection { color: var(--color-gray-950); background: var(--color-peach-500); }
+:focus-visible { outline: 2px solid var(--color-primary-500); outline-offset: 4px; }
+.dark :focus-visible { outline-color: var(--color-secondary-500); }
+@media (forced-colors: active) {
+  html, html.dark { scrollbar-color: auto; }
+}
+
+/* One viewport-sized color field flows behind every portfolio section. */
+.portfolio-flow {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--color-white);
+  --flow-turquoise: 23%;
+  --flow-coral: 12%;
+  --flow-yellow: 18%;
+}
+
+.dark .portfolio-flow {
+  background-color: var(--color-gray-950);
+  --flow-turquoise: 16%;
+  --flow-coral: 9%;
+  --flow-yellow: 10%;
+}
+
+.portfolio-flow::before {
+  content: '';
+  display: block;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  margin-bottom: -100vh;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(ellipse at 25% 35%, color-mix(in srgb, var(--color-secondary-500) var(--flow-turquoise), transparent), transparent 60%),
+    radial-gradient(ellipse at 80% 55%, color-mix(in srgb, var(--color-coral-500) var(--flow-coral), transparent), transparent 60%),
+    radial-gradient(ellipse at 50% 85%, color-mix(in srgb, var(--color-peach-500) var(--flow-yellow), transparent), transparent 60%);
+  background-size: 160% 160%, 170% 170%, 180% 180%;
+  animation: portfolio-color-wave 24s ease-in-out infinite alternate;
+}
+
+@keyframes portfolio-color-wave {
+  0% { background-position: 0% 0%, 100% 30%, 35% 100%; }
+  50% { background-position: 65% 40%, 30% 80%, 100% 25%; }
+  100% { background-position: 100% 100%, 0% 0%, 0% 55%; }
+}
+
+.portfolio-flow .portfolio-section,
+.dark .portfolio-flow .portfolio-section {
+  background: transparent;
+  border-top: 0;
+}
+
+#home h1 { color: var(--color-primary-500); }
+.dark #home h1 { color: var(--color-secondary-200); }
+
+/* The About image retains no individual background or frame. */
+#about .about-summary {
+  background-image: linear-gradient(135deg, var(--color-secondary-50), var(--color-peach-50));
+  border-color: var(--color-secondary-200);
+}
+.dark #about .about-summary {
+  background-image: linear-gradient(135deg, var(--color-primary-900), var(--color-gray-900));
+  border-color: var(--color-secondary-800);
+}
+#about .about-summary .group:nth-child(1) { border-top: 3px solid var(--color-secondary-500); }
+#about .about-summary .group:nth-child(2) { border-top: 3px solid var(--color-coral-500); }
+#about .about-summary .group:nth-child(3) { border-top: 3px solid var(--color-peach-500); }
+
+.portfolio-section:not(#home) h2::after {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 0.25rem;
+  margin: 0.875rem auto 0;
+  border-radius: 999px;
+  background: var(--background-image-brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-flow::before { animation: none; }
+}
+
+@media (forced-colors: active) {
+  .portfolio-flow, .dark .portfolio-flow { background: Canvas; }
+  .portfolio-flow::before { display: none; }
+  .portfolio-section, .dark .portfolio-section,
+  #about .about-summary, .dark #about .about-summary {
+    background: Canvas;
+    border-color: CanvasText;
+  }
+  #home h1, .dark #home h1 { color: CanvasText; }
+}

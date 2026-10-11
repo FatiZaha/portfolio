@@ -60,7 +60,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gray-50 dark:bg-gray-950">
+    <section id="contact" className="portfolio-section py-16 bg-gray-50 dark:bg-gray-950">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
         <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto">
@@ -82,7 +82,7 @@ export function Contact() {
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-150"
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-150"
                 placeholder="Your name"
               />
             </div>
@@ -95,7 +95,7 @@ export function Contact() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-150"
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-150"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -108,7 +108,7 @@ export function Contact() {
                 type="text"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
-                className="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-150"
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-150"
                 placeholder="e.g. Junior full-stack opportunity, collaboration, question..."
               />
             </div>
@@ -121,7 +121,7 @@ export function Contact() {
                 rows={5}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500 resize-none transition-all duration-150"
+                className="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary-500 resize-none transition-all duration-150"
                 placeholder="Write your message here..."
               />
             </div>
@@ -130,7 +130,7 @@ export function Contact() {
                 className={`mb-4 text-sm rounded-md px-3 py-2 ${
                   feedbackType === 'success'
                     ? 'bg-green-50 text-green-800 dark:bg-green-900/40 dark:text-green-100'
-                    : 'bg-red-50 text-red-800 dark:bg-red-900/40 dark:text-red-100'
+                    : 'bg-coral-50 text-coral-800 dark:bg-coral-900/40 dark:text-coral-100'
                 }`}
               >
                 {feedback}
@@ -140,7 +140,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={isSending}
-                className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-indigo-700 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-primary-700 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
               >
                 {isSending ? (
                   <>
@@ -174,7 +174,7 @@ export function Contact() {
                 Or email me directly at{' '}
                 <a
                   href="mailto:fatimazahra.zaha1504@gmail.com"
-                  className="font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
+                  className="font-medium text-primary-600 dark:text-primary-400 hover:underline"
                 >
                   fatimazahra.zaha1504@gmail.com
                 </a>
@@ -220,7 +220,7 @@ export function Contact() {
                   href="https://linkedin.com/in/fatima-zahra-zaha"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex-1 flex-1 text-center rounded-lg bg-blue-600 text-white px-3 py-1.5 text-xs font-medium hover:bg-blue-700 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+                  className="inline-flex-1 flex-1 text-center rounded-lg bg-primary-600 text-white px-3 py-1.5 text-xs font-medium hover:bg-primary-700 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
                 >
                   LinkedIn
                 </a>

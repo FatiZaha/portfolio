@@ -16,7 +16,7 @@ export function Languages() {
             className="bg-gray-50 dark:bg-gray-900/80 border border-gray-100 dark:border-gray-800 rounded-xl px-4 py-3 flex items-center justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
           >
             <span className="font-medium text-sm">{lang.language}</span>
-            <span className="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-200">
+            <span className="text-xs px-2 py-1 rounded-full bg-primary-50 text-primary-700 dark:bg-primary-900/50 dark:text-primary-200">
               {lang.level}
             </span>
           </div>

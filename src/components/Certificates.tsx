@@ -156,11 +156,11 @@ export function Certificates() {
   };
 
   return (
-    <section id="certificates" className="py-16 bg-white dark:bg-gray-900">
+    <section id="certificates" className="portfolio-section py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center mb-12">
           <div className="flex items-center gap-3 mb-4">
-            <Award className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+            <Award className="w-8 h-8 text-primary-600 dark:text-primary-400" />
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
               Certificates
             </h2>
@@ -171,7 +171,8 @@ export function Certificates() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
+          <div className="relative md:px-20">
           {/* Certificate Card */}
           <div className="bg-gray-50 dark:bg-gray-900/80 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
             <div className="grid md:grid-cols-2 gap-6 p-6">
@@ -191,7 +192,7 @@ export function Certificates() {
                     {certificates[currentIndex].title}
                   </h3>
                   <div className="space-y-2 mb-4">
-                    <p className="text-indigo-600 dark:text-indigo-400 font-semibold">
+                    <p className="text-primary-600 dark:text-primary-400 font-semibold">
                       {certificates[currentIndex].issuer}
                     </p>
                     <p className="text-gray-600 dark:text-gray-400">
@@ -211,7 +212,7 @@ export function Certificates() {
                     href={certificates[currentIndex].credentialUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors hover:-translate-y-0.5 hover:shadow-md transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors hover:-translate-y-0.5 hover:shadow-md transition-all duration-300"
                   >
                     <Award className="w-4 h-4" />
                     Verify on Coursera
@@ -238,9 +239,10 @@ export function Certificates() {
           </div>
 
           {/* Navigation Buttons */}
+          <div className="mt-6 flex justify-between md:mt-0">
           <button
             onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-110"
+            className="md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 cursor-pointer bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 motion-safe:hover:scale-110"
             aria-label="Previous certificate"
           >
             <ChevronLeft className="w-6 h-6 text-gray-900 dark:text-white" />
@@ -248,11 +250,13 @@ export function Certificates() {
 
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-110"
+            className="md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 cursor-pointer bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 motion-safe:hover:scale-110"
             aria-label="Next certificate"
           >
             <ChevronRight className="w-6 h-6 text-gray-900 dark:text-white" />
           </button>
+          </div>
+          </div>
 
           {/* Dots Indicator */}
           <div className="flex justify-center gap-2 mt-8">
@@ -262,7 +266,7 @@ export function Certificates() {
                 onClick={() => goToSlide(index)}
                 className={`transition-all duration-300 rounded-full ${
                   index === currentIndex
-                    ? 'w-8 h-3 bg-indigo-600 dark:bg-indigo-400'
+                    ? 'w-8 h-3 bg-primary-600 dark:bg-primary-400'
                     : 'w-3 h-3 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                 }`}
                 aria-label={`Go to certificate ${index + 1}`}

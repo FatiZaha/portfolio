@@ -122,7 +122,7 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-950">
+    <section id="projects" className="portfolio-section py-16 bg-gray-50 dark:bg-gray-950">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-2 text-center">Top Projects</h2>
         <p className="text-center text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
@@ -144,8 +144,8 @@ export function Projects() {
                 <span
                   className={`px-3 py-1 rounded-full text-xs font-medium ${
                     project.status === 'Completed'
-                      ? 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300'
-                      : 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-300'
+                      ? 'bg-dusty-dusty-rose-100 text-dusty-dusty-rose-700 dark:bg-dusty-dusty-rose-900/40 dark:text-dusty-dusty-rose-300'
+                      : 'bg-peach-100 text-peach-800 dark:bg-peach-900/40 dark:text-peach-300'
                   }`}
                 >
                   {project.status}
@@ -171,7 +171,7 @@ export function Projects() {
                   {getAllTechPills(project).map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-200 rounded-full text-xs font-medium border border-indigo-100 dark:border-indigo-800 hover:bg-indigo-100 dark:hover:bg-indigo-800/60 transition-colors duration-150"
+                      className="px-3 py-1.5 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-200 rounded-full text-xs font-medium border border-primary-100 dark:border-primary-800 hover:bg-primary-100 dark:hover:bg-primary-800/60 transition-colors duration-150"
                     >
                       {tech}
                     </span>
@@ -183,7 +183,7 @@ export function Projects() {
               <div className="flex gap-3 mt-auto">
                 <button
                   onClick={() => setSelectedProject(project)}
-                  className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 text-white px-4 py-2 text-sm font-medium hover:bg-indigo-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                  className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-primary-600 text-white px-4 py-2 text-sm font-medium hover:bg-primary-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 >
                   <ExternalLink className="w-4 h-4" />
                   View Details
@@ -221,8 +221,8 @@ export function Projects() {
                 <span
                   className={`px-3 py-1 rounded-full text-sm font-medium ${
                     selectedProject.status === 'Completed'
-                      ? 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300'
-                      : 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-300'
+                      ? 'bg-dusty-dusty-rose-100 text-dusty-dusty-rose-700 dark:bg-dusty-dusty-rose-900/40 dark:text-dusty-dusty-rose-300'
+                      : 'bg-peach-100 text-peach-800 dark:bg-peach-900/40 dark:text-peach-300'
                   }`}
                 >
                   {selectedProject.status}
@@ -259,7 +259,7 @@ export function Projects() {
                       key={idx}
                       className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"
                     >
-                      <span className="text-indigo-500 mt-0.5 flex-shrink-0">•</span>
+                      <span className="text-primary-500 dark:text-primary-300 mt-0.5 flex-shrink-0">•</span>
                       <span className="text-sm text-gray-600 dark:text-gray-300">
                         {feature}
                       </span>
@@ -277,7 +277,7 @@ export function Projects() {
                   {getAllTechPills(selectedProject).map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-200 rounded-full text-sm font-medium hover:bg-indigo-100 dark:hover:bg-indigo-800/60 transition-colors duration-150"
+                      className="px-4 py-2 bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-200 rounded-full text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-800/60 transition-colors duration-150"
                     >
                       {tech}
                     </span>
@@ -297,7 +297,7 @@ export function Projects() {
                         key={idx}
                         className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg"
                       >
-                        <span className="text-indigo-500 font-mono text-sm">
+                        <span className="text-primary-500 dark:text-primary-300 font-mono text-sm">
                           {String(idx + 1).padStart(2, '0')}
                         </span>
                         <span className="text-sm text-gray-600 dark:text-gray-300">

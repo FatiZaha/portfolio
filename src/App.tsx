@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import portfolioLogo from './assets/portfolio_logo.png';
 // 👇 1. Import the animation component
 import FadeInUp from './components/FadeInUp';
 
@@ -12,6 +13,18 @@ import { TechnicalSkills } from './components/TechnicalSkills';
 import { Languages } from './components/Languages';
 import { Interests } from './components/Interests';
 import { Contact } from './components/Contact';
+
+const navigationItems = [
+  { id: 'home', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'education', label: 'Education' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'certificates', label: 'Certificates' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'languages', label: 'Beyond Code' },
+  { id: 'contact', label: 'Contact' },
+];
 
 export function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -36,8 +49,7 @@ export function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Note: Added 'languages' to this list so it tracks correctly
-      const sections = ['home', 'about', 'experience', 'education', 'projects', 'certificates', 'skills', 'languages', 'contact'];
+      const sections = navigationItems.map((item) => item.id);
       const currentSection = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -64,14 +76,18 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 overflow-x-hidden">
+    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 overflow-x-clip">
       {/* Header - We do NOT animate the header so it stays sticky and stable */}
       <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur shadow-sm border-b border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white font-semibold text-lg">
-              FZ
-            </div>
+            <img
+              src={portfolioLogo}
+              alt="Fatima Zahra Zaha logo"
+              width={36}
+              height={36}
+              className="w-9 h-9 shrink-0 object-contain"
+            />
             <div className="hidden sm:flex flex-col">
               <span className="text-sm font-semibold tracking-wide">Fatima Zahra Zaha</span>
               <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -81,18 +97,19 @@ export function App() {
           </div>
 
           <div className="flex items-center gap-4">
-            <nav className="hidden md:flex items-center gap-5 text-sm">
-              {['home', 'about', 'experience', 'education', 'projects', 'certificates', 'skills', 'contact'].map((item) => (
+            <nav aria-label="Main navigation" className="hidden xl:flex items-center gap-4 text-sm">
+              {navigationItems.map((item) => (
                 <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className={`capitalize tracking-wide transition-colors ${
-                    activeSection === item
-                      ? 'text-indigo-600 dark:text-indigo-400 font-semibold'
-                      : 'text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400'
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  aria-current={activeSection === item.id ? 'location' : undefined}
+                  className={`cursor-pointer whitespace-nowrap tracking-wide transition-colors ${
+                    activeSection === item.id
+                      ? 'text-primary-600 dark:text-primary-400 font-semibold'
+                      : 'text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400'
                   }`}
                 >
-                  {item}
+                  {item.label}
                 </button>
               ))}
             </nav>
@@ -109,11 +126,11 @@ export function App() {
                 }`}
               >
                 {theme === 'dark' ? (
-                  <svg className="w-4 h-4 text-yellow-300" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-4 h-4 text-peach-300" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M21.64 13.65A9 9 0 0110.35 2.36 7 7 0 1019 21.64a9 9 0 002.64-7.99z" />
                   </svg>
                 ) : (
-                  <svg className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-4 h-4 text-secondary-700" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 4.5a1 1 0 011 1V7a1 1 0 11-2 0V5.5a1 1 0 011-1zm0 9.5a3 3 0 100-6 3 3 0 000 6zm7-3a1 1 0 011 1v.5a1 1 0 11-2 0V12a1 1 0 011-1zM5 11a1 1 0 011 1v.5a1 1 0 11-2 0V12a1 1 0 011-1zm9.95-4.536l.354-.354a1 1 0 011.414 1.414l-.354.354a1 1 0 11-1.414-1.414zM6.636 15.364l.354-.354a1 1 0 10-1.414-1.414l-.354.354a1 1 0 101.414 1.414zm0-8.728a1 1 0 011.414 0l.354.354A1 1 0 017.05 8.404l-.354-.354a1 1 0 010-1.414zm10.728 8.728a1 1 0 010 1.414l-.354.354a1 1 0 11-1.414-1.414l.354-.354a1 1 0 011.414 0zM12 18a1 1 0 011 1v1.5a1 1 0 11-2 0V19a1 1 0 011-1z" />
                   </svg>
                 )}
@@ -121,8 +138,11 @@ export function App() {
             </button>
 
             <button
-              className="md:hidden text-gray-700 dark:text-gray-200"
+              className="xl:hidden cursor-pointer text-gray-700 dark:text-gray-200"
               onClick={() => setIsMenuOpen((v) => !v)}
+              aria-label={isMenuOpen ? 'Close navigation' : 'Open navigation'}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -132,19 +152,20 @@ export function App() {
         </div>
 
         {isMenuOpen && (
-          <nav className="md:hidden border-t border-gray-100 dark:border-gray-800 bg-white/95 dark:bg-gray-950/95 pb-3">
+          <nav id="mobile-navigation" aria-label="Mobile navigation" className="xl:hidden border-t border-gray-100 dark:border-gray-800 bg-white/95 dark:bg-gray-950/95 pb-3">
             <div className="container mx-auto px-4 pt-2 space-y-1">
-              {['home', 'about', 'experience', 'education', 'projects', 'certificates', 'skills', 'contact'].map((item) => (
+              {navigationItems.map((item) => (
                 <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className={`block w-full text-left py-2 capitalize text-sm ${
-                    activeSection === item
-                      ? 'text-indigo-600 dark:text-indigo-400 font-semibold'
-                      : 'text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400'
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  aria-current={activeSection === item.id ? 'location' : undefined}
+                  className={`block w-full cursor-pointer text-left py-2 text-sm ${
+                    activeSection === item.id
+                      ? 'text-primary-600 dark:text-primary-400 font-semibold'
+                      : 'text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400'
                   }`}
                 >
-                  {item}
+                  {item.label}
                 </button>
               ))}
             </div>
@@ -155,6 +176,7 @@ export function App() {
       {/* 🎬 MAIN SECTIONS WITH ANIMATIONS */}
       {/* Each section is wrapped in FadeInUp */}
       
+      <main className="portfolio-flow">
       <FadeInUp>
         <Home onContactClick={() => scrollToSection('contact')} />
       </FadeInUp>
@@ -186,7 +208,7 @@ export function App() {
       {/* Languages & Interests 
           I added a section ID so your scrollspy works for this area too 
       */}
-      <section id="languages" className="py-16 bg-white dark:bg-gray-950">
+      <section id="languages" className="portfolio-section py-16 bg-white dark:bg-gray-950">
         <div className="container mx-auto px-4 flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-center">
           {/* 🎬 Animate Languages first */}
           <FadeInUp className="w-full lg:w-1/2">
@@ -203,6 +225,7 @@ export function App() {
       <FadeInUp>
         <Contact />
       </FadeInUp>
+      </main>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 text-xs py-6">

@@ -1,4 +1,4 @@
-import profile from '../assets/profile.png'
+import profile from '../assets/profile2.png'
 interface HomeProps {
   onContactClick: () => void;
 }
@@ -7,17 +7,17 @@ export function Home({ onContactClick }: HomeProps) {
   return (
     <section
       id="home"
-      className="py-20 bg-gradient-to-r from-indigo-50 via-white to-purple-50 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950"
+      className="portfolio-section py-20 bg-gradient-to-r from-primary-50 via-white to-peach-100 dark:from-gray-950 dark:via-gray-900 dark:to-primary-950"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 flex flex-col items-center gap-4">
             <div className="relative flex-shrink-0">
               {/* Outer glow frame */}
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-emerald-400 opacity-70 blur-sm" />
+              <div aria-hidden="true" className="absolute -inset-2 rounded-full bg-brand opacity-85 blur-md" />
               <div className="relative rounded-full overflow-hidden border border-white/70 dark:border-gray-700 bg-gray-100/90 dark:bg-gray-900/80 shadow-xl transform transition-all duration-300">
 
-                <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
+                <div className="w-28 h-28 rounded-full bg-brand flex items-center justify-center text-gray-950 text-4xl font-bold shadow-lg">
                 
                   <img
                     src={profile}
@@ -28,7 +28,7 @@ export function Home({ onContactClick }: HomeProps) {
                 </div>
               </div>
             </div>
-            <div className="text-xs uppercase tracking-[0.3em] text-indigo-600 dark:text-indigo-400">
+            <div className="rounded-full border border-secondary-300 bg-white/80 px-4 py-2 text-xs uppercase tracking-[0.2em] text-primary-600 dark:border-secondary-700 dark:bg-primary-900/80 dark:text-secondary-200">
               Computer & Network Engineer
             </div>
           </div>
@@ -56,13 +56,13 @@ export function Home({ onContactClick }: HomeProps) {
               href="https://linkedin.com/in/fatima-zahra-zaha"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-blue-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-blue-700 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-primary-700 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
             >
               <span>LinkedIn</span>
             </a>
             <button
               onClick={onContactClick}
-              className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-indigo-700 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-primary-700 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
             >
               <span>Contact me</span>
             </button>
