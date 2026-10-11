@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Fatima Zahra Zaha</title>
+  <defs>
+    <clipPath id="disc"><circle cx="32" cy="32" r="30" /></clipPath>
+    <radialGradient id="yellow" cx="18%" cy="22%" r="72%">
+      <stop stop-color="#ffe66d" />
+      <stop offset="1" stop-color="#ffe66d" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="coral" cx="78%" cy="65%" r="72%">
+      <stop stop-color="#ff6b6b" />
+      <stop offset="1" stop-color="#ff6b6b" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="mint" cx="30%" cy="90%" r="68%">
+      <stop stop-color="#b3ebe3" />
+      <stop offset="1" stop-color="#b3ebe3" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#disc)">
+    <rect width="64" height="64" fill="#4ecdc4" />
+    <rect width="64" height="64" fill="url(#mint)" />
+    <rect width="64" height="64" fill="url(#coral)" />
+    <rect width="64" height="64" fill="url(#yellow)" />
+  </g>
+  <path fill="#0b2024" d="M15 20h15v5H20v5h9v5h-9v9h-5V20Zm18 0h16v5L39 39h10v5H32v-5l11-14H33v-5Z" />
+</svg>
