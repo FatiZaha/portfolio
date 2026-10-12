@@ -167,6 +167,15 @@ html.dark { scrollbar-color: var(--color-secondary-500) var(--color-gray-950); }
   .portfolio-flow::before { animation: none; }
 }
 
+.philosophy-highlight {
+  text-shadow: 0 0 18px color-mix(in srgb, var(--color-secondary-500) 22%, transparent);
+}
+
+@media (forced-colors: active) {
+  .philosophy-statement { background: Canvas; color: CanvasText; border-color: CanvasText; }
+  .philosophy-highlight { color: CanvasText; text-shadow: none; }
+}
+
 @media (forced-colors: active) {
   .portfolio-flow, .dark .portfolio-flow { background: Canvas; }
   .portfolio-flow::before { display: none; }

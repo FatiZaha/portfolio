@@ -71,6 +71,16 @@ Preserve existing rounded cards, pill badges and circular profile image.
 
 ## Components
 
+“My Philosophy” sits between About and Experience without a navigation item.
+Its semantic quote and signature use a mint-white surface and teal text in
+light mode, and a deep teal surface with soft-white text in dark mode. Emphasis
+on “understand anything” uses readable deep turquoise in light mode and the
+exact turquoise accent in dark mode. Oversized quotation marks, three
+small coding-window dots and a code bracket are decorative and hidden from
+assistive technology. A static turquoise glow adds depth without a looping text
+effect. Framer Motion reveals the heading, quote and signature once with a
+short stagger; reduced-motion preferences show content immediately.
+
 The heading underline and Home profile glow share `bg-brand`,
 the blended turquoise–coral–yellow color field defined by
 `--background-image-brand`. Overlapping radial patches replace ordered color

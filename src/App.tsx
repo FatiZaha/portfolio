@@ -5,6 +5,7 @@ import FadeInUp from './components/FadeInUp';
 
 import { Home } from './components/Home';
 import { About } from './components/About';
+import { Philosophy } from './components/Philosophy';
 import { Experience } from './components/Experience';
 import { Education } from './components/Education';
 import { Projects } from './components/Projects';
@@ -184,6 +185,8 @@ export function App() {
       <FadeInUp>
         <About />
       </FadeInUp>
+
+      <Philosophy />
 
       <FadeInUp>
         <Experience />
